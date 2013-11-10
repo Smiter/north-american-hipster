@@ -1,0 +1,10 @@
+# build products...
+*.py[co]
+# PyCharm stuff...
+.idea
+# Sublime stuff
+*.sublime-project
+*.sublime-workspace
+
+#other files...
+local_settings.py
