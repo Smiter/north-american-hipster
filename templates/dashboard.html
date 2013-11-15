@@ -19,8 +19,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>canada</td>
+      {% for hub in result %}
+       <tr>
+        <td>{{hub.hubname}}</td>
         <td>
             <a href="#" target="_blank">
                 <button class="btn btn-primary btn-sm">
@@ -37,6 +38,8 @@
             </button>
         </td>
       </tr>
+      {% endfor %}
+     
     </tbody>
   </table>
     <a href="#modal-create-tint" role="button" class="btn btn-primary btn-sm" data-toggle="modal" data-backdrop="static" onclick="$('#modal-create-tint input').val('')">
