@@ -1,3 +1,17 @@
+html {
+    -webkit-font-smoothing: antialiased;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+body{
+    height: 100%;
+}
+
+div {
+    position: relative;
+}
+
 .hub-tab-content {
     width: 100%;
     background-color: #FFF;
@@ -16,4 +30,59 @@
 
 .hub-tab-nav {
     margin-top: 20px;
+}
+
+#left-settings{
+    float: left;
+    width: 300px;
+    background: red;
+    height: 100%;
+}
+
+#right-section{
+    float: left;
+}
+
+.inner-left-settings{
+    position: fixed;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #FFF;
+    overflow: auto;
+    z-index: 9;
+}
+
+
+/* Collapse styles*/
+
+.accordion-group {
+    margin-bottom: 2px;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.accordion-heading {
+    background-color: white;
+    font-size: 18px;
+}
+
+.accordion-heading .accordion-toggle {
+    display: block;
+    padding: 8px 15px;
+}
+
+.accordion-heading i {
+    float: right;
+    opacity: .3;
+}
+
+.edit-accordion-help {
+    margin-right: 8px;
+}
+
+a.accordion-toggle:hover {
+    text-decoration: none;
 }

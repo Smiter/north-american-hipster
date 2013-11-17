@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block css %}
+  <link rel="stylesheet" href="/site_media/css/hub_styles.css">
+{% endblock %}
+
+{% block main %}
+  <div id="left-settings">
+      <div class="inner-left-settings">
+            <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#edit-accordion" href="#edit-content" data-popover="popover-edit-content">
+                            Content <i class="icon-chevron-down"></i><i class="edit-accordion-help edit-accordion-content-help icon-question-sign"></i>
+                        </a>
+                    </div>
+                    <div id="edit-content" class="accordion-body collapse" style="height: 0px;">
+                        <div class="accordion-inner">
+                            <div class="accordion-inner-covering loggedout-only"></div>
+                            <h4>Add Accounts</h4>
+                            <hr>
+                            <div class="edit-content-connect clearfix">
+                                <div style="width:280px;">
+                                    <a type="button" data-toggle="modal" data-target="#edit-content-fb-modal" class="icn-hm-social-med clickable icn-hm-fb-big fb" style=""><i class="foundicon-facebook"></i><p><span>facebook</span></p></a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+      </div>
+  </div>
+  <div id="right-section">
+      <div class="social-getter" style="width:100%; height:100%;" data-hubname="{{hubname}}" data-columns="4" data-expand="true">
+      </div>
+  </div>
+{% endblock %}
+
+{% block javascript %}
+  <script src="/site_media/js/handlebars.min-latest.js"></script>
+  <script src="/site_media/js/jquery.nicescroll.min.js"></script>  
+  <script src="/site_media/js/social-getter.js"></script>
+{% endblock %}  
