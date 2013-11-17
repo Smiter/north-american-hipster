@@ -1,0 +1,61 @@
+{ "_id" : { "$oid" : "52829c1c8033fa6af95cb51e" }, "hubname" : "atlanta", "facebook" : "discoveratlanta", "twitter" : "discoveratlanta", "instagram" : "discoveratlanta" }
+{ "_id" : { "$oid" : "5282e1d149d9ea70d13bdcf9" }, "hubname" : "asia", "facebook" : "DiscoverHongKong", "twitter" : "discoverhk", "instagram" : "DiscoverHongKong" }
+{ "_id" : { "$oid" : "5282ea01e0ea9c0e85b5b623" }, "hubname" : "alaska", "facebook" : "alaskatravelnews", "twitter" : "alaskatravlnews" }
+{ "_id" : { "$oid" : "5282ecd5e0ea9c0e85b5b624" }, "hubname" : "albuquerque", "facebook" : "visitABQ", "twitter" : "VisitABQ", "instagram" : "ABQPhotos" }
+{ "_id" : { "$oid" : "5282ed98e0ea9c0e85b5b625" }, "hubname" : "anaheim", "facebook" : "AnaheimOC", "twitter" : "anaheim_oc", "instagram" : "myanaheim" }
+{ "_id" : { "$oid" : "5282ee12e0ea9c0e85b5b626" }, "hubname" : "arizona", "facebook" : "arizonatravel", "twitter" : "ArizonaTourism" }
+{ "_id" : { "$oid" : "5282eeb2e0ea9c0e85b5b627" }, "hubname" : "arkansas", "facebook" : "arkansasstatetourism", "twitter" : "artourism", "instagram" : "arkansas" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7e6" }, "hubname" : "atlantic-city", "facebook" : "DoAtlanticCity", "twitter" : "visitac", "instagram" : "Do_AC" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7e7" }, "hubname" : "australia", "facebook" : "SeeAustralia", "twitter" : "australia", "instagram" : "Australia" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7e8" }, "hubname" : "baltimore", "facebook" : "BmoreMD", "twitter" : "BaltimoreMD" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7e9" }, "hubname" : "boston", "facebook" : "BostonUSA", "twitter" : "bostoninsider", "instagram" : "visitboston" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7ea" }, "hubname" : "branson", "facebook" : "bransoncvb", "twitter" : "explorebranson", "instagram" : "explorebranson" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7eb" }, "hubname" : "brazil", "facebook" : "VisitBrasil", "twitter" : "VisitBrasil" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7ec" }, "hubname" : "british-island", "facebook" : "BritishVirginIs", "twitter" : "BritishVirginIs" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7ed" }, "hubname" : "california", "facebook" : "VisitCA", "twitter" : "VisitCA", "instagram" : "visitcalifornia" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7ee" }, "hubname" : "canada", "facebook" : "ExploreCanada", "twitter" : "ExploreCanada", "instagram" : "explorecanada" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7ef" }, "facebook" : "capitalregionusa", "hubname" : "capital-region", "twitter" : "washingtondc" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7f0" }, "hubname" : "carlsbad", "facebook" : "CarlsbadCA", "twitter" : "VisitCarlsbad" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7f1" }, "hubname" : "chicago", "facebook" : "ChooseChicago", "twitter" : "ChooseChicago" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7f2" }, "hubname" : "cleveland", "facebook" : "positivelyclevelandfans", "twitter" : "positivelycleve", "instagram" : "positivelycleve" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7f3" }, "hubname" : "coastal-south-carolina", "facebook" : "explorechs", "twitter" : "explorechs", "instagram" : "explorecharleston" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7f4" }, "hubname" : "colorado", "facebook" : "visitcolorado", "twitter" : "colorado", "instagram" : "visitcolorado" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7f5" }, "hubname" : "columbia", "facebook" : "columbiasc", "twitter" : "columbiasc", "instagram" : "columbiasc" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7f6" }, "hubname" : "dallas", "facebook" : "visitdallas", "twitter" : "visit_dallas", "instagram" : "Visit_Dallas" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7f7" }, "hubname" : "dubai", "facebook" : "Dubai.City", "twitter" : "DubaiSqueez", "instagram" : "Dubai" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7f8" }, "hubname" : "europe", "facebook" : "visiteurope", "twitter" : "visiteurope" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7f9" }, "hubname" : "florida-keys", "facebook" : "floridakeysandkeywest", "twitter" : "thefloridakeys" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7fa" }, "hubname" : "florida-ne-coast", "facebook" : "visitjacksonville", "twitter" : "visit_jax" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7fb" }, "hubname" : "fort-lauderdale", "facebook" : "visitlauderdale", "twitter" : "visitlauderdale", "instagram" : "visitlauderdale" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7fc" }, "hubname" : "fort-myers", "facebook" : "FtMyersSanibel", "twitter" : "FtMyersSanibel", "instagram" : "ftmyerssanibel" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7fd" }, "hubname" : "georgia", "facebook" : "ExploreGeorgia", "twitter" : "exploregeorgia", "instagram" : "exploregeorgia" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7fe" }, "hubname" : "great-lakes", "facebook" : "puremichigan", "twitter" : "PureMichigan" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a7ff" }, "hubname" : "hawaii", "facebook" : "Hawaii", "twitter" : "gohawaii", "instagram" : "gohawaii" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a800" }, "hubname" : "houston", "facebook" : "VisitHoustonTexas", "twitter" : "visithouston" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a801" }, "hubname" : "idaho", "facebook" : "visitidahofanpage", "twitter" : "visitidaho" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a802" }, "hubname" : "indianapolis", "facebook" : "visitindy", "twitter" : "visitIndy", "instagram" : "visitindy" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a803" }, "hubname" : "iowa", "facebook" : "IowaTourism", "twitter" : "Travel_Iowa" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a804" }, "hubname" : "ireland", "facebook" : "DiscoverIrelandGB", "twitter" : "DiscoverIreland" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a805" }, "hubname" : "jacksonville", "facebook" : "visitjacksonville", "twitter" : "visit_jax" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a806" }, "hubname" : "jamaica", "facebook" : "visitjamaica", "twitter" : "VisitJamaicaNow", "instagram" : "visitjamaica" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a807" }, "hubname" : "kansas", "facebook" : "TravelKS", "twitter" : "travelks", "instagram" : "KansasPhotos" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a808" }, "hubname" : "kentucky", "facebook" : "travelkentucky", "twitter" : "kentuckytourism", "instagram" : "kytourism" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a809" }, "hubname" : "knoxville", "facebook" : "visitknoxvilletn", "twitter" : "Visit_Knoxville" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a80a" }, "hubname" : "lasvegas", "facebook" : "lasvegasweekly", "twitter" : "vegas" , "instagram" : "visitlasvegas"  }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a80b" }, "hubname" : "lexington", "facebook" : "biglexfans", "twitter" : "Big_Lex_KY", "instagram" : "biglexky" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a80c" }, "hubname" : "losangeles", "facebook" : "losangelesfan", "twitter" : "discoverLA", "instagram" : "DiscoverLA" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a80d" }, "hubname" : "louisiana", "facebook" : "LouisianaTravel", "twitter" : "louisianatravel", "instagram" : "louisianatravel" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a80e" }, "hubname" : "louisville", "facebook" : "louisvillekentucky", "twitter" : "gotolouisville", "instagram" : "gotolouisville" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a80f" }, "hubname" : "manchester", "facebook" : "visitmanchester", "twitter" : "visit_mcr" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a810" }, "facebook" : "VisitMesa", "hubname" : "mesa", "instagram" : "visitmesa", "twitter" : "VisitMesa" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a811" }, "hubname" : "miami", "facebook" : "visitmiami", "twitter" : "MiamiandBeaches", "instagram" : "miamiandbeaches" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a812" }, "hubname" : "missisippi", "facebook" : "visitms", "twitter" : "visitms" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a813" }, "hubname" : "monreal", "facebook" : "Montreal", "twitter" : "montreal", "instagram" : "visit_montreal" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a814" }, "hubname" : "mountain-south", "facebook" : "BlueRidgeParkwayDaily", "twitter" : "BRParkwayDaily" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a815" }, "hubname" : "myrtle-beach", "facebook" : "VisitMyrtleBeachSC", "twitter" : "MyMyrtleBeach", "instagram" : "MyMyrtleBeach" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a816" }, "hubname" : "ohio", "facebook" : "DiscoverOhio", "twitter" : "DiscoverOhio", "instagram" : "ohiogram" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a817" }, "hubname" : "oregon", "facebook" : "TravelOregon", "twitter" : "traveloregon", "instagram" : "traveloregon" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a818" }, "hubname" : "rocky-mountains", "facebook" : "visitidahofanpage", "twitter" : "RMNPOfficial" }
+{ "_id" : { "$oid" : "52839f5e2ac85c0c7ee9a819" }, "hubname" : "st-augustine", "facebook" : "officialstaugustine", "twitter" : "FlHistoricCoast" }
+{ "_id" : { "$oid" : "5283db8a332768ce65c591a1" }, "hubname" : "spartanburg", "facebook" : "revolutionaryspartanburg", "twitter" : "SpartanburgCVB", "instagram" : "visitspartanburg" }
+{ "hubname" : "washington", "facebook" : "ExperienceWA", "twitter" : "ExperienceWA"}
