@@ -25,6 +25,19 @@
                                     <a type="button" data-toggle="modal" data-target="#edit-content-in-modal" class="icn-hm-social-med clickable icn-hm-in-big in" style=""><i class="foundicon-instagram"></i><p><span>instagram</span></p></a>
                                 </div>
                             </div>
+                            <h4 style="margin-top: 40px;">Accounts you have added</h4>
+                            <hr>
+
+                            {% for acc in social_accounts %}
+                                <div class="edit-content-account dropShadow">
+                                    <div class="edit-content-account-info">
+                                        <img src="http://www.google.com/s2/favicons?domain={{acc.0}}.com" height="16" width="16" class="favicon" alt="{{acc.0}}"> {{acc.1}}
+                                    </div>
+                                    <a href="#" class="btn btn-primary btn-sm">
+                                      Remove
+                                    </a>
+                                </div>
+                            {% endfor %}
                         </div>
                 </div>
             </div>
