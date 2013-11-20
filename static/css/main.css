@@ -291,3 +291,9 @@ button.in, a.in {
     top: 3px;
     right: 3px;
 }
+
+/* modal */
+
+.edit-content-moderate-holder{
+    margin-top: 10px;
+}

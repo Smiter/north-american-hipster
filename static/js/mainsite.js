@@ -1,1 +1,1 @@
-$("#right-section").css('width', $(window).width() - 300 + "px");
+$("#right-section").css('width', $(window).width() - 310 + "px");

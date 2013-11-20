@@ -21,8 +21,8 @@
                             <div class="edit-content-connect clearfix">
                                 <div style="width:280px;">
                                     <a type="button" data-toggle="modal" data-target="#edit-content-fb-modal" class="icn-hm-social-med clickable icn-hm-fb-big fb" style=""><i class="foundicon-facebook"></i><p><span>facebook</span></p></a>
-                                    <a type="button" data-toggle="modal" data-target="#edit-content-tw-modal" class="icn-hm-social-med clickable icn-hm-tw-big tw" style=""><i class="foundicon-twitter"></i><p><span>twitter</span></p></a>
-                                    <a type="button" data-toggle="modal" data-target="#edit-content-in-modal" class="icn-hm-social-med clickable icn-hm-in-big in" style=""><i class="foundicon-instagram"></i><p><span>instagram</span></p></a>
+                                    <a type="button" data-toggle="modal" data-target="#edit-content-tw-modal1" class="icn-hm-social-med clickable icn-hm-tw-big tw" style=""><i class="foundicon-twitter"></i><p><span>twitter</span></p></a>
+                                    <a type="button" data-toggle="modal" data-target="#edit-content-in-modal2" class="icn-hm-social-med clickable icn-hm-in-big in" style=""><i class="foundicon-instagram"></i><p><span>instagram</span></p></a>
                                 </div>
                             </div>
                             <h4 style="margin-top: 40px;">Accounts you have added</h4>
@@ -47,7 +47,71 @@
       <div class="social-getter" style="width:100%; height:100%;" data-hubname="{{hubname}}" data-columns="4" data-expand="true">
       </div>
   </div>
+
+
+  <!-- Facebook modal -->
+<div class="modal fade" id="edit-content-fb-modal">
+      <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Facebook</h4>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#edit-content-fb-0" data-toggle="pill">Profile</a></li>
+            <li class=""><a href="#edit-content-fb-1" data-toggle="pill">Page</a></li>
+            <li><a href="#edit-content-fb-2" data-toggle="pill">Page Posts by Others</a></li>
+            <li class=""><a href="#edit-content-fb-3" data-toggle="pill">Hashtags</a></li>
+            <li class=""><a href="#edit-content-fb-4" data-toggle="pill">Group</a></li>
+        </ul>
+        <div class="tab-content" style="text-align:center;">
+            <div class="tab-pane active" id="edit-content-fb-0">
+               <div class="well">
+
+                <div class="input-group">
+                    <span class="input-group-addon">facebook.com</span>
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Connect</button>
+                    </span>
+                  </div>
+                    <div class="edit-content-moderate-holder">
+                        <label class="edit-content-fb-modal-page-moderate-label edit-content-modal-moderate-label"><input type="checkbox" class="edit-content-fb-modal-page-moderate"> Manually approve posts before making them public.</label>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="edit-content-fb-1">
+                 <div class="well">
+                  Currently not avialable
+                </div>
+            </div>
+            <div class="tab-pane" id="edit-content-fb-2">
+                <div class="well">
+                  Currently not avialable
+                </div>
+            </div>
+            <div class="tab-pane" id="edit-content-fb-3">
+              <div class="well">
+                  Currently not avialable
+                </div>
+            </div>
+            <div class="tab-pane" id="edit-content-fb-4">
+              <div class="well">
+                  Currently not avialable
+                </div>
+            </div>
+        </div>
+    </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+    
+</div>
+
+
 {% endblock %}
+
+
 
 {% block javascript %}
   <script src="/site_media/js/handlebars.min-latest.js"></script>
