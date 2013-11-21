@@ -21,8 +21,8 @@
                             <div class="edit-content-connect clearfix">
                                 <div style="width:280px;">
                                     <a type="button" data-toggle="modal" data-target="#edit-content-fb-modal" class="icn-hm-social-med clickable icn-hm-fb-big fb" style=""><i class="foundicon-facebook"></i><p><span>facebook</span></p></a>
-                                    <a type="button" data-toggle="modal" data-target="#edit-content-tw-modal1" class="icn-hm-social-med clickable icn-hm-tw-big tw" style=""><i class="foundicon-twitter"></i><p><span>twitter</span></p></a>
-                                    <a type="button" data-toggle="modal" data-target="#edit-content-in-modal2" class="icn-hm-social-med clickable icn-hm-in-big in" style=""><i class="foundicon-instagram"></i><p><span>instagram</span></p></a>
+                                    <a type="button" data-toggle="modal" data-target="#edit-content-tw-modal" class="icn-hm-social-med clickable icn-hm-tw-big tw" style=""><i class="foundicon-twitter"></i><p><span>twitter</span></p></a>
+                                    <a type="button" data-toggle="modal" data-target="#edit-content-in-modal" class="icn-hm-social-med clickable icn-hm-in-big in" style=""><i class="foundicon-instagram"></i><p><span>instagram</span></p></a>
                                 </div>
                             </div>
                             <h4 style="margin-top: 40px;">Accounts you have added</h4>
@@ -105,9 +105,113 @@
     </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
-    
 </div>
 
+
+  <!-- Twitter modal -->
+<div class="modal fade" id="edit-content-tw-modal">
+      <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Twitter</h4>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#edit-content-tw-0" data-toggle="pill">Twitter account</a></li>
+            <li class=""><a href="#edit-content-tw-1" data-toggle="pill">Hashtag</a></li>
+            <li><a href="#edit-content-tw-2" data-toggle="pill">Favorites</a></li>
+            <li class=""><a href="#edit-content-tw-3" data-toggle="pill">Locations</a></li>
+            <li class=""><a href="#edit-content-tw-4" data-toggle="pill">Custom</a></li>
+        </ul>
+        <div class="tab-content" style="text-align:center;">
+            <div class="tab-pane active" id="edit-content-tw-0">
+               <div class="well">
+
+                <div class="input-group">
+                    <span class="input-group-addon">@</span>
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Connect</button>
+                    </span>
+                  </div>
+                    <div class="edit-content-moderate-holder">
+                        <label class="edit-content-fb-modal-page-moderate-label edit-content-modal-moderate-label"><input type="checkbox" class="edit-content-fb-modal-page-moderate"> Manually approve posts before making them public.</label>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="edit-content-tw-1">
+                 <div class="well">
+                  Currently not avialable
+                </div>
+            </div>
+            <div class="tab-pane" id="edit-content-tw-2">
+                <div class="well">
+                  Currently not avialable
+                </div>
+            </div>
+            <div class="tab-pane" id="edit-content-tw-3">
+              <div class="well">
+                  Currently not avialable
+                </div>
+            </div>
+            <div class="tab-pane" id="edit-content-tw-4">
+              <div class="well">
+                  Currently not avialable
+                </div>
+            </div>
+        </div>
+    </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+
+  <!-- Instagram modal -->
+<div class="modal fade" id="edit-content-in-modal">
+      <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Instagram</h4>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#edit-content-in-0" data-toggle="pill">Instagram account</a></li>
+            <li class=""><a href="#edit-content-in-1" data-toggle="pill">Hashtag</a></li>
+            <li><a href="#edit-content-in-2" data-toggle="pill">Location</a></li>
+        </ul>
+        <div class="tab-content" style="text-align:center;">
+            <div class="tab-pane active" id="edit-content-in-0">
+               <div class="well">
+
+                <div class="input-group">
+                    <span class="input-group-addon">@</span>
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Connect</button>
+                    </span>
+                  </div>
+                    <div class="edit-content-moderate-holder">
+                        <label class="edit-content-fb-modal-page-moderate-label edit-content-modal-moderate-label"><input type="checkbox" class="edit-content-fb-modal-page-moderate"> Manually approve posts before making them public.</label>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="edit-content-in-1">
+                 <div class="well">
+                  Currently not avialable
+                </div>
+            </div>
+            <div class="tab-pane" id="edit-content-in-2">
+                <div class="well">
+                  Currently not avialable
+                </div>
+            </div>
+        </div>
+    </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
 
 {% endblock %}
 
