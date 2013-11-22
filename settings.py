@@ -35,7 +35,6 @@ INSTALLED_APPS = (
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -91,5 +90,5 @@ MEDIA_URL = ''
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'trunk/static').replace('\\', '/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'hub-site/static').replace('\\', '/')
 

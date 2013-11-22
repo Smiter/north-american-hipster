@@ -13,4 +13,5 @@ urlpatterns = patterns('',
         {'document_root': settings.STATIC_ROOT}),
     url(r'^(?P<hubname>.+)/$', mainsite_views.view_hub),
     url(r'^(?P<hubname>.+)/edit$', mainsite_views.edit_hub),
+    url(r'^add-social-account$', mainsite_views.add_social_account),
 )

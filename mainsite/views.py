@@ -1,7 +1,8 @@
-from django.shortcuts import render
-from django.template import RequestContext
 from django.shortcuts import render_to_response
 from pymongo import MongoClient
+from django.http import HttpResponse
+import json
+
 client = MongoClient()
 db = client.socialdb
 hubs = db.hubs
@@ -20,4 +21,13 @@ def edit_hub(request, hubname):
     for i in hub.items():
         if i[0] in SUPPORTED_SOCIAL:
             social_accounts.append(i)
-    return render_to_response('edit_hub.html', {"hubname": hubname, "social_accounts": social_accounts})      
+    return render_to_response('edit_hub.html', {"hubname": hubname, "social_accounts": social_accounts})    
+
+def add_social_account(request):
+    if request.method == "POST":
+        is_values_empty = bool([param for param in request.POST.values() if param == ""])
+        if not is_values_empty:
+            doc = hubs.update({"hubname": request.POST['hubname']}, {"$set": {request.POST['social_name']: request.POST['account_name']}})
+            if doc:
+                return HttpResponse(json.dumps({"msg": "success"}), mimetype='application/json')
+    return HttpResponse(json.dumps({"msg": "fail"}), mimetype='application/json')

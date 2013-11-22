@@ -20,16 +20,16 @@
                             <hr>
                             <div class="edit-content-connect clearfix">
                                 <div style="width:280px;">
-                                    <a type="button" data-toggle="modal" data-target="#edit-content-fb-modal" class="icn-hm-social-med clickable icn-hm-fb-big fb" style=""><i class="foundicon-facebook"></i><p><span>facebook</span></p></a>
-                                    <a type="button" data-toggle="modal" data-target="#edit-content-tw-modal" class="icn-hm-social-med clickable icn-hm-tw-big tw" style=""><i class="foundicon-twitter"></i><p><span>twitter</span></p></a>
-                                    <a type="button" data-toggle="modal" data-target="#edit-content-in-modal" class="icn-hm-social-med clickable icn-hm-in-big in" style=""><i class="foundicon-instagram"></i><p><span>instagram</span></p></a>
+                                    <a type="button"  data-toggle="modal" data-target="#facebook-modal" class="icn-hm-social-med clickable icn-hm-fb-big fb" style=""><i class="foundicon-facebook"></i><p><span>facebook</span></p></a>
+                                    <a type="button"  data-toggle="modal" data-target="#twitter-modal" class="icn-hm-social-med clickable icn-hm-tw-big tw" style=""><i class="foundicon-twitter"></i><p><span>twitter</span></p></a>
+                                    <a type="button"  data-toggle="modal" data-target="#instagram-modal" class="icn-hm-social-med clickable icn-hm-in-big in" style=""><i class="foundicon-instagram"></i><p><span>instagram</span></p></a>
                                 </div>
                             </div>
                             <h4 style="margin-top: 40px;">Accounts you have added</h4>
                             <hr>
 
                             {% for acc in social_accounts %}
-                                <div class="edit-content-account dropShadow">
+                                <div data-account-name="{{acc.0}}" class="edit-content-account dropShadow">
                                     <div class="edit-content-account-info">
                                         <img src="http://www.google.com/s2/favicons?domain={{acc.0}}.com" height="16" width="16" class="favicon" alt="{{acc.0}}"> {{acc.1}}
                                     </div>
@@ -50,7 +50,7 @@
 
 
   <!-- Facebook modal -->
-<div class="modal fade" id="edit-content-fb-modal">
+<div class="modal fade" id="facebook-modal">
       <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -71,9 +71,9 @@
 
                 <div class="input-group">
                     <span class="input-group-addon">facebook.com</span>
-                    <input type="text" class="form-control">
+                    <input id=type="text" class="form-control">
                     <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Connect</button>
+                      <button id="fb_connect_btn" data-social-name="facebook" class="btn btn-default" type="button">Connect</button>
                     </span>
                   </div>
                     <div class="edit-content-moderate-holder">
@@ -109,7 +109,7 @@
 
 
   <!-- Twitter modal -->
-<div class="modal fade" id="edit-content-tw-modal">
+<div class="modal fade" id="twitter-modal">
       <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -132,7 +132,7 @@
                     <span class="input-group-addon">@</span>
                     <input type="text" class="form-control">
                     <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Connect</button>
+                      <button class="btn btn-default" data-social-name="twitter" type="button">Connect</button>
                     </span>
                   </div>
                     <div class="edit-content-moderate-holder">
@@ -168,7 +168,7 @@
 
 
   <!-- Instagram modal -->
-<div class="modal fade" id="edit-content-in-modal">
+<div class="modal fade" id="instagram-modal">
       <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -189,7 +189,7 @@
                     <span class="input-group-addon">@</span>
                     <input type="text" class="form-control">
                     <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Connect</button>
+                      <button class="btn btn-default" data-social-name="instagram" type="button">Connect</button>
                     </span>
                   </div>
                     <div class="edit-content-moderate-holder">
