@@ -31,7 +31,8 @@
                             {% for acc in social_accounts %}
                                 <div data-account-name="{{acc.0}}" class="edit-content-account dropShadow">
                                     <div class="edit-content-account-info">
-                                        <img src="http://www.google.com/s2/favicons?domain={{acc.0}}.com" height="16" width="16" class="favicon" alt="{{acc.0}}"> {{acc.1}}
+                                        <img src="http://www.google.com/s2/favicons?domain={{acc.0}}.com" height="16" width="16" class="favicon" alt="{{acc.0}}">
+                                        <span class="social-span">{{acc.1}}</span>
                                     </div>
                                     <a href="#" class="btn btn-primary btn-sm">
                                       Remove
@@ -212,6 +213,8 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div>
+
+
 
 {% endblock %}
 

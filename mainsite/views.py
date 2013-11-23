@@ -31,3 +31,14 @@ def add_social_account(request):
             if doc:
                 return HttpResponse(json.dumps({"msg": "success"}), mimetype='application/json')
     return HttpResponse(json.dumps({"msg": "fail"}), mimetype='application/json')
+
+
+def remove_social_account(request):
+    if request.method == "POST":
+        is_values_empty = bool([param for param in request.POST.values() if param == ""])
+        if not is_values_empty:
+            doc = hubs.update({"hubname": request.POST['hubname']}, {"$unset": {request.POST['social_name']: 1}})
+            if doc:
+                return HttpResponse(json.dumps({"msg": "success"}), mimetype='application/json')
+    return HttpResponse(json.dumps({"msg": "fail"}), mimetype='application/json')
+    
