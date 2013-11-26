@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, redirect
 from pymongo import MongoClient
 from django.http import HttpResponse
 import json
@@ -42,3 +42,15 @@ def remove_social_account(request):
                 return HttpResponse(json.dumps({"msg": "success"}), mimetype='application/json')
     return HttpResponse(json.dumps({"msg": "fail"}), mimetype='application/json')
     
+
+def add_hub(request):
+    if request.method == "POST":
+        hub = hubs.find_one({"hubname": request.POST['hubname']})
+        if not hub:
+            new_hub = hubs.insert({"hubname": request.POST['hubname']})
+            if new_hub:
+                return HttpResponse(json.dumps({"msg": "success"}), mimetype='application/json')
+        else:
+            return HttpResponse(json.dumps({"msg": "exists"}), mimetype='application/json')
+    return HttpResponse(json.dumps({"msg": "fail"}), mimetype='application/json')
+

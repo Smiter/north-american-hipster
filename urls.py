@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     url(r'^(?P<hubname>.+)/edit$', mainsite_views.edit_hub),
     url(r'^add-social-account$', mainsite_views.add_social_account),
     url(r'^remove-social-account$', mainsite_views.remove_social_account),
+    url(r'^add-hub$', mainsite_views.add_hub),
 
     
 )
