@@ -54,3 +54,15 @@ def add_hub(request):
             return HttpResponse(json.dumps({"msg": "exists"}), mimetype='application/json')
     return HttpResponse(json.dumps({"msg": "fail"}), mimetype='application/json')
 
+
+def remove_hub(request):
+    if request.method == "POST":
+        hub = hubs.find_one({"hubname": request.POST['hubname']})
+        if hub:
+            removed = hubs.remove({"hubname": request.POST['hubname']})
+            if removed:
+                return HttpResponse(json.dumps({"msg": "success"}), mimetype='application/json')
+    return HttpResponse(json.dumps({"msg": "fail"}), mimetype='application/json')
+
+    
+

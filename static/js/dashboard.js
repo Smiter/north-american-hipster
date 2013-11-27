@@ -10,4 +10,21 @@ $(document).ready(function() {
             }
         });
     });
+
+    $(".remove-hub-btn").on("click", function(){
+        var data = {};
+        data['hubname'] = $(this).attr("data-hubname");
+        var self = this;
+        var ans = confirm("Do you really want to remove that hub? ");
+        if (ans == true){
+            sendRequest('/remove-hub', data, function(responce){
+                if(responce['msg'] != 'fail'){
+                    $(self).parent().parent().remove();
+                }
+            });
+        }
+    });
+
+    
+
 });
