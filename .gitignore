@@ -5,6 +5,14 @@
 # Sublime stuff
 *.sublime-project
 *.sublime-workspace
+# virtualenv
+Include
+Lib
+Scripts
 
 #other files...
 local_settings.py
+
+MySQL-python-wininst.log
+regpy.py
+RemoveMySQL-python.exe

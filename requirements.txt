@@ -1,3 +1,4 @@
 Django==1.6
 pymongo
-MySQLdb
+mysql-python
+django-registration==1.0

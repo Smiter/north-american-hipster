@@ -24,13 +24,17 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'registration',
     'mainsite',
     'users',
 )
+
+ACCOUNT_ACTIVATION_DAYS = 7  # One-week activation window
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -44,9 +48,12 @@ ROOT_URLCONF = 'urls'
 
 WSGI_APPLICATION = 'wsgi.application'
 
+FIXTURE_DIRS = (
+    os.path.join(os.path.dirname(__file__), 'fixtures').replace('\\', '/'),
+)
 
 TEMPLATE_DIRS = (
-    os.path.join(os.path.dirname(__file__),'templates').replace('\\','/'),
+    os.path.join(os.path.dirname(__file__), 'templates').replace('\\', '/'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -68,6 +75,10 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+SITE_ID = 1
+
+SITE_DOMAIN = 'localhost'
 
 SITE_NAME = 'North American Hipster'
 
@@ -91,4 +102,6 @@ MEDIA_URL = ''
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'hub-site/static').replace('\\', '/')
+
+DEFAULT_FROM_EMAIL = 'system@%s' % SITE_DOMAIN
 

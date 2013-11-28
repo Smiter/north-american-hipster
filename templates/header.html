@@ -29,11 +29,17 @@
               <a href="/dashboard">DASHBOARD</a>
             </li>
             <li>
-              <a href="#">SIGN UP</a>
+              <a href="{% url "registration_register" %}">SIGN UP</a>
             </li>
+            {% if user.is_authenticated %}
             <li>
-              <a href="#">LOGIN</a>
+              <a href="{% url "auth_logout" %}">LOGOUT</a>
             </li>
+            {% else %}
+            <li>
+              <a href="{% url "auth_login" %}">LOGIN</a>
+            </li>
+            {% endif %}
           </ul>
 
         </div>
