@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% block main %}
-    <div class="container" style="margin: 10px;">
-        <div class="row" style="margin-bottom: 10px;">
-            <h1 class="col-md-2 col-md-offset-6 col-sm-2 col-sm-offset-6 col">Registration</h1>
+    <div style="background-color: #F1F1F1; margin-top: 30px; margin-bottom: 30px;">
+        <div class="container">
+            <h1 class="text-center">CREATE AN ACCOUNT</h1>
         </div>
+    </div>
+    <div class="container" style="margin: 10px;">
         <form role="form" method="post">
             {% csrf_token %}
             {% for field in form %}
@@ -12,7 +14,9 @@
                     <div class="col-md-6 col-sm-6">
                         <input class="form-control" id="{{ field.id_for_label }}"
                                name="{{ field.name }}" type="{{ field.field.widget.input_type }}"/>
-                        {% if field.help_text %}<p class="help-block text-info">{{ field.help_text }}</p>{% endif %}
+                        {% if field.help_text %}
+                            <p class="help-block text-info">{{ field.help_text }}</p>
+                        {% endif %}
                         {% if field.errors %}
                             {% for error in field.errors %}
                                 <p class="help-block text-danger">{{ error }}</p>
