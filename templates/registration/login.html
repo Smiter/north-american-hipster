@@ -1,34 +1,56 @@
 {% extends "base.html" %}
 {% block main %}
-<h1>Authorization</h1>
-
-{% if user.is_authenticated %}
-    Hi, {{ user.username }}! You are authorized. But you also can
-    <a href="{% url "auth_logout" %}">logout</a>.<br/><br/>
-{% else %}
-
-{% if form.non_field_errors %}
-{{ form.non_field_errors }}
-{% endif %}
-
-<form method="post" action="">
-{% csrf_token %}
-<dl class="register">
-{% for field in form %}
-    <dt>{{ field.label_tag }}</dt>
-    <dd class="clearfix">{{ field }}
-    {% if field.help_text %}<div class="clearfix">{{ field.help_text }}</div>{% endif %}
-    {% if field.errors %}<div class="myerrors clearfix">{{ field.errors }}</div>{% endif %}
-    </dd>
-{% endfor %}
-</dl>
-<input type="submit" value="Login" class="clearfix">
-</form>
-
-<script type="text/javascript">
-document.getElementById('id_username').focus()
-</script>
-
- <br/><br/>
-{% endif %}
+    <!-- situation with already authenticated user is processed inside view -->
+    <div style="background-color: #F1F1F1; margin-top: 30px; margin-bottom: 30px;">
+        <div class="container">
+            <h1 class="text-center">LOGIN</h1>
+        </div>
+    </div>
+    <div class="container" style="margin: 10px;">
+        <form class="form-horizontal" method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group row">
+                    <label class="col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 control-label"
+                           for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    <div class="col-md-6 col-sm-6">
+                        <input class="form-control" id="{{ field.id_for_label }}"
+                               name="{{ field.name }}" type="{{ field.field.widget.input_type }}"
+                               {% if field.value and field.field.widget.input_type != 'password' %}
+                               value="{{ field.value }}"
+                               {% endif %}/>
+                        {% if field.help_text %}
+                            <p class="help-block text-info">{{ field.help_text }}</p>
+                        {% endif %}
+                        {% if field.errors %}
+                            {% for error in field.errors %}
+                                <p class="help-block text-danger">{{ error }}</p>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+            {% if form.non_field_errors %}
+                {% for non_field_error in form.non_field_errors %}
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-5">
+                            <p class="text-danger">{{ non_field_error }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <div class="row">
+                <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-5">
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Login
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+{% block javascript %}
+    <script type="text/javascript">
+        document.getElementById('id_username').focus()
+    </script>
 {% endblock %}

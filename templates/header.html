@@ -14,7 +14,7 @@
 
           <ul class="nav navbar-nav navbar-right">
              <li>
-              <a href="/">HOME</a>
+              <a href="{% url "home" %}">HOME</a>
             </li>
             <li>
               <a href="#">PRICING</a>
@@ -26,22 +26,21 @@
               <a href="#">FAQ</a>
             </li>
             <li>
-              <a href="/dashboard">DASHBOARD</a>
-            </li>
-            <li>
-              <a href="{% url "registration_register" %}">SIGN UP</a>
+              <a href="{% url "dashboard" %}">DASHBOARD</a>
             </li>
             {% if user.is_authenticated %}
-            <li>
-              <a href="{% url "auth_logout" %}">LOGOUT</a>
-            </li>
+                <li>
+                  <a href="{% url "auth_logout" %}">LOGOUT</a>
+                </li>
             {% else %}
-            <li>
-              <a href="{% url "auth_login" %}">LOGIN</a>
-            </li>
+                <li>
+                  <a href="{% url "registration_register" %}">SIGN UP</a>
+                </li>
+                <li>
+                  <a href="{% url "auth_login" %}">LOGIN</a>
+                </li>
             {% endif %}
           </ul>
-
         </div>
       </div>
     </div>

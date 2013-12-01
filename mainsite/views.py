@@ -1,6 +1,7 @@
 from django.shortcuts import render_to_response, redirect
 from pymongo import MongoClient
 from django.http import HttpResponse
+from django.template import RequestContext
 import json
 
 client = MongoClient()
@@ -10,10 +11,10 @@ hubs = db.hubs
 SUPPORTED_SOCIAL = ["twitter", "facebook", "instagram"]
 
 def dashboard(request):
-    return render_to_response('dashboard.html', {"result": hubs.find()})
+    return render_to_response('dashboard.html', {"result": hubs.find()}, context_instance=RequestContext(request))
 
 def view_hub(request, hubname):
-    return render_to_response('view_hub.html', {"hubname": hubname}) 
+    return render_to_response('view_hub.html', {"hubname": hubname}, context_instance=RequestContext(request))
 
 def edit_hub(request, hubname):
     hub = hubs.find_one({"hubname": hubname})
@@ -21,7 +22,8 @@ def edit_hub(request, hubname):
     for i in hub.items():
         if i[0] in SUPPORTED_SOCIAL:
             social_accounts.append(i)
-    return render_to_response('edit_hub.html', {"hubname": hubname, "social_accounts": social_accounts})    
+    return render_to_response('edit_hub.html', {"hubname": hubname, "social_accounts": social_accounts},
+                              context_instance=RequestContext(request))
 
 def add_social_account(request):
     if request.method == "POST":

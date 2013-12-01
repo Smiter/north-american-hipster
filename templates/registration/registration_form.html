@@ -1,19 +1,25 @@
 {% extends "base.html" %}
 {% block main %}
+    <!-- situation with already authenticated user is processed inside view -->
     <div style="background-color: #F1F1F1; margin-top: 30px; margin-bottom: 30px;">
         <div class="container">
             <h1 class="text-center">CREATE AN ACCOUNT</h1>
         </div>
     </div>
     <div class="container" style="margin: 10px;">
-        <form role="form" method="post">
+        <form class="form-horizontal" method="post">
             {% csrf_token %}
             {% for field in form %}
                 <div class="form-group row">
-                    <label class="col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 control-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    <label class="col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 control-label"
+                           for="{{ field.id_for_label }}">{{ field.label }}</label>
+
                     <div class="col-md-6 col-sm-6">
                         <input class="form-control" id="{{ field.id_for_label }}"
-                               name="{{ field.name }}" type="{{ field.field.widget.input_type }}"/>
+                               name="{{ field.name }}" type="{{ field.field.widget.input_type }}"
+                                {% if field.value and field.field.widget.input_type != 'password' %}
+                               value="{{ field.value }}"
+                                {% endif %}/>
                         {% if field.help_text %}
                             <p class="help-block text-info">{{ field.help_text }}</p>
                         {% endif %}
@@ -25,6 +31,15 @@
                     </div>
                 </div>
             {% endfor %}
+            {% if form.non_field_errors %}
+                {% for non_field_error in form.non_field_errors %}
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-5">
+                            <p class="text-danger">{{ non_field_error }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
             <div class="row">
                 <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-5">
                     <button type="submit" class="btn btn-primary btn-block">
@@ -34,4 +49,9 @@
             </div>
         </form>
     </div>
+{% endblock %}
+{% block javascript %}
+    <script type="text/javascript">
+        document.getElementById('id_username').focus()
+    </script>
 {% endblock %}

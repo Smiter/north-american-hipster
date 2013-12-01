@@ -1,5 +1,4 @@
 from local_settings import *
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os, sys
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -17,6 +16,8 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
+
+LOGIN_REDIRECT_URL = 'dashboard'
 
 
 # Application definition
