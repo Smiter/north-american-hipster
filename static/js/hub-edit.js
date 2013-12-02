@@ -51,4 +51,34 @@ $(document).ready(function() {
         });
     });
 
+    // Timer for making sure that post have been loaded...
+    // It's a hack, but the quick solution at this moment. Needs to be refactored later.
+    
+    setTimeout(function(){
+        $(".post").append('<div class="post-edit">' +
+            '<div class="post-edit-button btn btn-white post-edit-button-edit">' +
+                '<i class="icon-pencil"></i><br>edit</div>' +
+            '<div class="post-edit-button btn btn-white post-edit-button-delete">' +
+                '<i class="icon-remove"></i><br>reject</div>' +
+            '<div class="post-edit-button btn btn-white post-edit-button-approve">' +
+                '<i class="icon-ok"></i><br>approve</div>' +
+            '<div class="post-edit-button btn btn-white post-edit-button-display">' +
+                '<i style="font-size:13px;" class="icon-desktop"></i><br>display</div>' +
+            '<div class="post-edit-button btn btn-white post-edit-button-deletepermanently">' +
+                '<i class="icon-remove-sign"></i><br>delete</div>' +
+            '<div class="post-edit-button btn btn-white post-edit-button-stick">' +
+                '<i class="icon-pushpin"></i><br>pin to top</div>' +
+            '<div class="post-edit-button btn btn-white post-edit-button-unstick">' +
+                '<i class="icon-pushpin"></i><br>unpin</div>' +
+            '</div>');
+        $(".post").hover(
+            function() {
+               $(".post-edit", this).css("opacity", 1);
+            },
+            function() {
+                $(".post-edit", this).css("opacity", 0);
+            }
+        );
+    }, 1000);
+
 });

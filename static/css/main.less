@@ -326,3 +326,54 @@ button.in, a.in {
     font-size: 10px;
     margin-top: 10px;
 }
+
+
+/* edit post menu */
+
+.post-edit-button {
+    color: #474747;
+    display: block;
+    font-size: 11px;
+    margin-top: -1px;
+    padding: 5px;
+}
+
+.btn-white {
+    background-color: #FFFFFF;
+    border: 1px solid #BFCACA;
+    color: #000000;
+}
+
+.post-edit{
+    background-color: #FFFFFF;
+    border-radius: 0 0 0 2px;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    transition: opacity 0.15s ease 0s;
+    width: 58px;
+    z-index: 3;
+}
+
+#posts_holder .post{
+    overflow: hidden;
+}
+
+.btn-white:hover, .btn-black:hover, .btn-orange:hover {
+    background-position: 0 -15px;
+    text-decoration: none;
+}
+
+.post-edit-button:hover {
+    background: #007fff;
+    color: #FFF;
+    -moz-transition: background, color 0.3s;
+    -webkit-transition: background, color 0.3s;
+    transition: background, color 0.3s;
+}
+
+.post-edit-button-display, .post-edit-button-approve, .post-edit-button-deletepermanently, .post-edit-button-unstick{
+    display: none;
+} 
