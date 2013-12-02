@@ -1,4 +1,17 @@
 {% extends "base.html" %}
+{% block css %}
+    <style type="text/css">
+        #activation_box {
+            display: table;
+            margin: 50px auto 0 auto;
+            font-size: 50px;
+            background-color: lightgreen;
+            padding: 10px;
+        }
+    </style>
+{% endblock %}
 {% block main %}
-<h1>Your account has been activated.</h1>
+    <span id="activation_box">
+        Your account has been activated.
+    </span>
 {% endblock %}

@@ -1,4 +1,17 @@
 {% extends "base.html" %}
+{% block css %}
+    <style type="text/css">
+        #activation_box {
+            display: table;
+            margin-top: 50px;
+            font-size: 50px;
+            background-color: lightgreen;
+            padding: 10px;
+        }
+    </style>
+{% endblock %}
 {% block main %}
-<h1>Email containing account-activation information has been sent.</h1>
+    <span id="activation_box">
+        An account activation email has been sent to you. Please check your email and follow the instructions.
+    </span>
 {% endblock %}

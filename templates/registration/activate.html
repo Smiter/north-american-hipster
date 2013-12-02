@@ -1,4 +1,17 @@
 {% extends "base.html" %}
+{% block css %}
+    <style type="text/css">
+        #activation_box {
+            display: table;
+            margin: 50px auto 0 auto;
+            font-size: 50px;
+            background-color: lightcoral;
+            padding: 10px;
+        }
+    </style>
+{% endblock %}
 {% block main %}
-<h1>Your account has not been activated with this activation key: {{ activation_key }}. Please try again.</h1>
+    <span id="activation_box">
+        Sorry, your account could not be activated at this time.
+    </span>
 {% endblock %}
