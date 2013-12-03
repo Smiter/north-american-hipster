@@ -86,6 +86,38 @@ $(document).ready(function() {
                 $(".post-edit", this).css("opacity", 0);
             }
         );
+        $(".post-edit-button-delete").on('click', function() {
+                var data = {};
+                data["post_id"] = $(this).closest(".post").attr("id");
+                sendRequest('/reject-post', data, function(responce){
+                    if(responce['msg'] == 'fail'){
+                        $("#alertDiv").append('<div class="alert alert-danger">' +
+                            '<button class="close" data-dismiss="alert" style="right:25px" onclick="">×</button>' +
+                            '<span style="color:black">Cannot reject this post.</span>' +
+                            '</div>');
+                    } else {
+                        $(this).css("display", "none");
+                        $(this).parent().find(".post-edit-button-approve").css("display", "block");
+                    }
+                });
+            }
+        );
+        $(".post-edit-button-approve").on('click', function() {
+                var data = {};
+                data["post_id"] = $(this).closest(".post").attr("id");
+                sendRequest('/accept-post', data, function(responce){
+                    if(responce['msg'] == 'fail'){
+                        $("#alertDiv").append('<div class="alert alert-danger">' +
+                            '<button class="close" data-dismiss="alert" style="right:25px" onclick="">×</button>' +
+                            '<span style="color:black">Cannot accept this post.</span>' +
+                            '</div>');
+                    } else {
+                        $(this).css("display", "none");
+                        $(this).parent().find(".post-edit-button-delete").css("display", "block");
+                    }
+                });
+            }
+        );
     }, 1000);
 
 });

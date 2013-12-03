@@ -12,6 +12,7 @@ Scripts
 
 #other files...
 local_settings.py
+static/js/social-getter.js
 
 MySQL-python-wininst.log
 regpy.py

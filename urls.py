@@ -26,5 +26,7 @@ urlpatterns = patterns('',
     url(r'^remove-social-account$', mainsite_views.remove_social_account),
     url(r'^add-hub$', mainsite_views.add_hub),
     url(r'^remove-hub$', mainsite_views.remove_hub),
+    url(r'^reject-post$', mainsite_views.reject_post),
+    url(r'^accept-post$', mainsite_views.accept_post),
     
 )
