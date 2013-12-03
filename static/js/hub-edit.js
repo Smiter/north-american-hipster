@@ -71,6 +71,13 @@ $(document).ready(function() {
             '<div class="post-edit-button btn btn-white post-edit-button-unstick">' +
                 '<i class="icon-pushpin"></i><br>unpin</div>' +
             '</div>');
+
+        $(".post").append('<div class="post-moderate-label">' +
+            '<div class="post-moderate-label-approved"><i class="icon-ok-sign"></i> approved</div>' +
+                '<div class="post-moderate-label-pending"><i class="icon-remove-sign"></i> pending approval</div>' +
+                '<div class="post-moderate-label-display"><i class="icon-desktop" style="font-size:12px;"></i> currently displayed </div>' +
+            '</div>');
+
         $(".post").hover(
             function() {
                $(".post-edit", this).css("opacity", 1);
