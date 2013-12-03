@@ -89,6 +89,7 @@ $(document).ready(function() {
         $(".post-edit-button-delete").on('click', function() {
                 var data = {};
                 data["post_id"] = $(this).closest(".post").attr("id");
+                var that = this;
                 sendRequest('/reject-post', data, function(responce){
                     if(responce['msg'] == 'fail'){
                         $("#alertDiv").append('<div class="alert alert-danger">' +
@@ -96,8 +97,8 @@ $(document).ready(function() {
                             '<span style="color:black">Cannot reject this post.</span>' +
                             '</div>');
                     } else {
-                        $(this).css("display", "none");
-                        $(this).parent().find(".post-edit-button-approve").css("display", "block");
+                        $(that).css("display", "none");
+                        $(that).parent().find(".post-edit-button-approve").css("display", "block");
                     }
                 });
             }
@@ -105,6 +106,7 @@ $(document).ready(function() {
         $(".post-edit-button-approve").on('click', function() {
                 var data = {};
                 data["post_id"] = $(this).closest(".post").attr("id");
+                var that = this;
                 sendRequest('/accept-post', data, function(responce){
                     if(responce['msg'] == 'fail'){
                         $("#alertDiv").append('<div class="alert alert-danger">' +
@@ -112,8 +114,8 @@ $(document).ready(function() {
                             '<span style="color:black">Cannot accept this post.</span>' +
                             '</div>');
                     } else {
-                        $(this).css("display", "none");
-                        $(this).parent().find(".post-edit-button-delete").css("display", "block");
+                        $(that).css("display", "none");
+                        $(that).parent().find(".post-edit-button-delete").css("display", "block");
                     }
                 });
             }
