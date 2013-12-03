@@ -55,7 +55,9 @@ $(document).ready(function() {
     // It's a hack, but the quick solution at this moment. Needs to be refactored later.
     
     setTimeout(function(){
-        $(".post").append('<div class="post-edit">' +
+        var posts = $(".post");
+
+        posts.append('<div class="post-edit">' +
             '<div class="post-edit-button btn btn-white post-edit-button-edit">' +
                 '<i class="icon-pencil"></i><br>edit</div>' +
             '<div class="post-edit-button btn btn-white post-edit-button-delete">' +
@@ -72,13 +74,22 @@ $(document).ready(function() {
                 '<i class="icon-pushpin"></i><br>unpin</div>' +
             '</div>');
 
-        $(".post").append('<div class="post-moderate-label">' +
+        posts.append('<div class="post-moderate-label">' +
             '<div class="post-moderate-label-approved"><i class="icon-ok-sign"></i> approved</div>' +
                 '<div class="post-moderate-label-pending"><i class="icon-remove-sign"></i> pending approval</div>' +
                 '<div class="post-moderate-label-display"><i class="icon-desktop" style="font-size:12px;"></i> currently displayed </div>' +
             '</div>');
 
-        $(".post").hover(
+        posts.each(function(i, p){
+            var accepted = $(this).attr('data-visible');
+            if (accepted != "" && accepted == 0) {
+                $('.post-edit-button-delete', this).css("display", "none");
+                $('.post-edit-button-approve', this).css("display", "block");
+                $('.post-moderate-label-approved', this).css("display", "none");
+                $('.post-moderate-label-pending', this).css("display", "block");
+            } //another situation is handled by default (if accepted is 1 or "")
+        });
+        posts.hover(
             function() {
                $(".post-edit", this).css("opacity", 1);
             },
@@ -99,6 +110,8 @@ $(document).ready(function() {
                     } else {
                         $(that).css("display", "none");
                         $(that).parent().find(".post-edit-button-approve").css("display", "block");
+                        $(that).closest(".post").find(".post-moderate-label-approved").css("display", "none");
+                        $(that).closest(".post").find(".post-moderate-label-pending").css("display", "block");
                     }
                 });
             }
@@ -116,6 +129,8 @@ $(document).ready(function() {
                     } else {
                         $(that).css("display", "none");
                         $(that).parent().find(".post-edit-button-delete").css("display", "block");
+                        $(that).closest(".post").find(".post-moderate-label-pending").css("display", "none");
+                        $(that).closest(".post").find(".post-moderate-label-approved").css("display", "block");
                     }
                 });
             }
