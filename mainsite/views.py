@@ -70,7 +70,7 @@ def reject_post(request):
     if request.method == "POST":
         posts = request.POST['hubname']
         res = db[posts].update({'_id': request.POST['post_id']}, {'$set': {'accepted': 0}})
-        if False:
+        if res:
             return HttpResponse(json.dumps({"msg": "success"}), mimetype='application/json')
     return HttpResponse(json.dumps({"msg": "fail"}), mimetype='application/json')
 
