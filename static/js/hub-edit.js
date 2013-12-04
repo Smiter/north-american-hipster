@@ -51,44 +51,43 @@ $(document).ready(function() {
         });
     });
 
-    // Timer for making sure that post have been loaded...
-    // It's a hack, but the quick solution at this moment. Needs to be refactored later.
-    
-    setTimeout(function(){
+    $(document).on("socialGetterNewPostsLoaded", function(){
         var posts = $(".post");
-
-        posts.append('<div class="post-edit">' +
-            '<div class="post-edit-button btn btn-white post-edit-button-edit">' +
-                '<i class="icon-pencil"></i><br>edit</div>' +
-            '<div class="post-edit-button btn btn-white post-edit-button-delete">' +
-                '<i class="icon-remove"></i><br>reject</div>' +
-            '<div class="post-edit-button btn btn-white post-edit-button-approve">' +
-                '<i class="icon-ok"></i><br>approve</div>' +
-            '<div class="post-edit-button btn btn-white post-edit-button-display">' +
-                '<i style="font-size:13px;" class="icon-desktop"></i><br>display</div>' +
-            '<div class="post-edit-button btn btn-white post-edit-button-deletepermanently">' +
-                '<i class="icon-remove-sign"></i><br>delete</div>' +
-            '<div class="post-edit-button btn btn-white post-edit-button-stick">' +
-                '<i class="icon-pushpin"></i><br>pin to top</div>' +
-            '<div class="post-edit-button btn btn-white post-edit-button-unstick">' +
-                '<i class="icon-pushpin"></i><br>unpin</div>' +
-            '</div>');
-
-        posts.append('<div class="post-moderate-label">' +
-            '<div class="post-moderate-label-approved"><i class="icon-ok-sign"></i> approved</div>' +
-                '<div class="post-moderate-label-pending"><i class="icon-remove-sign"></i> pending approval</div>' +
-                '<div class="post-moderate-label-display"><i class="icon-desktop" style="font-size:12px;"></i> currently displayed </div>' +
-            '</div>');
-
         posts.each(function(i, p){
-            var accepted = $(this).attr('data-visible');
-            if (accepted != "" && accepted == 0) {
-                $('.post-edit-button-delete', this).css("display", "none");
-                $('.post-edit-button-approve', this).css("display", "block");
-                $('.post-moderate-label-approved', this).css("display", "none");
-                $('.post-moderate-label-pending', this).css("display", "block");
-            } //another situation is handled by default (if accepted is 1 or "")
-        });
+            var post_edit_div = $(".post-edit", this);
+            if(post_edit_div.length == 0 || typeof post_edit_div == 'undefined'){
+                $(this).append('<div class="post-edit">' +
+                    '<div class="post-edit-button btn btn-white post-edit-button-edit">' +
+                        '<i class="icon-pencil"></i><br>edit</div>' +
+                    '<div class="post-edit-button btn btn-white post-edit-button-delete">' +
+                        '<i class="icon-remove"></i><br>reject</div>' +
+                    '<div class="post-edit-button btn btn-white post-edit-button-approve">' +
+                        '<i class="icon-ok"></i><br>approve</div>' +
+                    '<div class="post-edit-button btn btn-white post-edit-button-display">' +
+                        '<i style="font-size:13px;" class="icon-desktop"></i><br>display</div>' +
+                    '<div class="post-edit-button btn btn-white post-edit-button-deletepermanently">' +
+                        '<i class="icon-remove-sign"></i><br>delete</div>' +
+                    '<div class="post-edit-button btn btn-white post-edit-button-stick">' +
+                        '<i class="icon-pushpin"></i><br>pin to top</div>' +
+                    '<div class="post-edit-button btn btn-white post-edit-button-unstick">' +
+                        '<i class="icon-pushpin"></i><br>unpin</div>' +
+                    '</div>');
+
+                $(this).append('<div class="post-moderate-label">' +
+                    '<div class="post-moderate-label-approved"><i class="icon-ok-sign"></i> approved</div>' +
+                        '<div class="post-moderate-label-pending"><i class="icon-remove-sign"></i> pending approval</div>' +
+                        '<div class="post-moderate-label-display"><i class="icon-desktop" style="font-size:12px;"></i> currently displayed </div>' +
+                    '</div>');
+                var accepted = $(this).attr('data-visible');
+                if (accepted != "" && accepted == 0) {
+                    $('.post-edit-button-delete', this).css("display", "none");
+                    $('.post-edit-button-approve', this).css("display", "block");
+                    $('.post-moderate-label-approved', this).css("display", "none");
+                    $('.post-moderate-label-pending', this).css("display", "block");
+                } //another situation is handled by default (if accepted is 1 or "")
+            }
+        }); //end posts each
+
         posts.hover(
             function() {
                $(".post-edit", this).css("opacity", 1);
@@ -135,6 +134,6 @@ $(document).ready(function() {
                 });
             }
         );
-    }, 1000);
+    });
 
 });
