@@ -85,6 +85,11 @@ $(document).ready(function() {
                     $('.post-moderate-label-approved', this).css("display", "none");
                     $('.post-moderate-label-pending', this).css("display", "block");
                 } //another situation is handled by default (if accepted is 1 or "")
+                var pinned = $(this).attr('data-pinned-to-top');
+                if (pinned != "" && pinned == 1) {
+                    $('.post-edit-button-stick', this).css("display", "none");
+                    $('.post-edit-button-unstick', this).css("display", "block");
+                }
             }
         }); //end posts each
 
@@ -130,6 +135,40 @@ $(document).ready(function() {
                         $(that).parent().find(".post-edit-button-delete").css("display", "block");
                         $(that).closest(".post").find(".post-moderate-label-pending").css("display", "none");
                         $(that).closest(".post").find(".post-moderate-label-approved").css("display", "block");
+                    }
+                });
+            }
+        );
+        $(".post-edit-button-stick").on('click', function() {
+                var data = {};
+                data["post_id"] = $(this).closest(".post").attr("id");
+                var that = this;
+                sendRequest('/pin-post', data, function(responce){
+                    if(responce['msg'] == 'fail'){
+                        $("#alertDiv").append('<div class="alert alert-danger">' +
+                            '<button class="close" data-dismiss="alert" style="right:25px" onclick="">×</button>' +
+                            '<span style="color:black">Cannot pin this post to top.</span>' +
+                            '</div>');
+                    } else {
+                        $(that).css("display", "none");
+                        $(that).parent().find(".post-edit-button-unstick").css("display", "block");
+                    }
+                });
+            }
+        );
+        $(".post-edit-button-unstick").on('click', function() {
+                var data = {};
+                data["post_id"] = $(this).closest(".post").attr("id");
+                var that = this;
+                sendRequest('/unpin-post', data, function(responce){
+                    if(responce['msg'] == 'fail'){
+                        $("#alertDiv").append('<div class="alert alert-danger">' +
+                            '<button class="close" data-dismiss="alert" style="right:25px" onclick="">×</button>' +
+                            '<span style="color:black">Cannot unpin this post.</span>' +
+                            '</div>');
+                    } else {
+                        $(that).css("display", "none");
+                        $(that).parent().find(".post-edit-button-stick").css("display", "block");
                     }
                 });
             }

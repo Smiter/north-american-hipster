@@ -82,4 +82,20 @@ def accept_post(request):
             return HttpResponse(json.dumps({"msg": "success"}), mimetype='application/json')
     return HttpResponse(json.dumps({"msg": "fail"}), mimetype='application/json')
 
+def pin_post(request):
+    if request.method == "POST":
+        posts = request.POST['hubname']
+        res = db[posts].update({'_id': request.POST['post_id']}, {'$set': {'pinned-to-top': 1}})
+        if res:
+            return HttpResponse(json.dumps({"msg": "success"}), mimetype='application/json')
+    return HttpResponse(json.dumps({"msg": "fail"}), mimetype='application/json')
+
+def unpin_post(request):
+    if request.method == "POST":
+        posts = request.POST['hubname']
+        res = db[posts].update({'_id': request.POST['post_id']}, {'$set': {'pinned-to-top': 0}})
+        if res:
+            return HttpResponse(json.dumps({"msg": "success"}), mimetype='application/json')
+    return HttpResponse(json.dumps({"msg": "fail"}), mimetype='application/json')
+
 

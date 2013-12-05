@@ -28,5 +28,7 @@ urlpatterns = patterns('',
     url(r'^remove-hub$', mainsite_views.remove_hub),
     url(r'^reject-post$', mainsite_views.reject_post),
     url(r'^accept-post$', mainsite_views.accept_post),
+    url(r'^pin-post$', mainsite_views.pin_post),
+    url(r'^unpin-post$', mainsite_views.unpin_post),
     
 )
